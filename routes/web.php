@@ -15,12 +15,15 @@ use App\Http\Controllers\backend\BackendController;
 */
 
 
-Route::get('/',[BackendController::class,'index']);
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
 
+
+Route::get('/portal/{any?}',[BackendController::class,'index'])->middleware('auth')->name('dashboard')->where('any', '[\/\w\.-]*');
+
+Route::get('unauthorized/user',function(){
+return abort(401,'Unauthorized User');
+});
+
+Route::get('/logout',[AuthenticatedSessionController::class,'destroy']);
 
 require __DIR__.'/auth.php';
