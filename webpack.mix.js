@@ -11,6 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
+//  mix.css('resources/css/master.css', 'public/css/master.css')
+ mix.css('resources/css/master.css', 'public/css',[
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('autoprefixer'),
+]);
+mix.js('resources/js/master.js', 'public/js/master.js');
+
  mix.ts('resources/ts/app.ts', 'public/js').vue()
  .postCss('resources/css/app.css', 'public/css', [
     require('postcss-import'),

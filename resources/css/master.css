@@ -1,0 +1,24 @@
+/* @import 'public/app-assets/vendors/css/vendors.min.css'; */
+@import "../../public/app-assets/vendors/css/vendors.min.css";
+@import '/public/app-assets/vendors/css/charts/apexcharts.css';
+@import '/public/app-assets/vendors/css/extensions/toastr.min.css';
+@import '/public/app-assets/css/bootstrap.min.css';
+@import '/public/app-assets/css/bootstrap-extended.min.css';
+@import '/public/app-assets/css/colors.min.css';
+@import '/public/app-assets/css/components.min.css';
+@import '/public/app-assets/css/themes/dark-layout.min.css';
+@import '/public/app-assets/css/themes/bordered-layout.min.css';
+@import '/public/app-assets/css/themes/semi-dark-layout.min.css';
+
+@import '/public/app-assets/css/core/menu/menu-types/vertical-menu.min.css';
+
+@import '/public/app-assets/css/pages/dashboard-ecommerce.min.css';
+@import '/public/app-assets/css/plugins/charts/chart-apex.min.css';
+@import '/public/app-assets/css/plugins/extensions/ext-component-toastr.min.css';  
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+
