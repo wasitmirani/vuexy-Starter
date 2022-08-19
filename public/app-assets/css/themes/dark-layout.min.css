@@ -33,7 +33,7 @@ body.dark-layout {
 }
 
 .dark-layout a:hover {
-    color: #7367F0
+    color: var(--bs-primary)
 }
 
 .dark-layout label {
@@ -267,7 +267,7 @@ body.dark-layout {
 }
 
 .dark-layout .main-menu .collapse-toggle-icon {
-    color: #7367F0 !important
+    color: var(--bs-primary) !important
 }
 
 .dark-layout .ps__thumb-x,
@@ -418,7 +418,7 @@ body.dark-layout {
 }
 
 .dark-layout .btn-group label[class*=btn-outline-] {
-    color: #7367F0 !important
+    color: var(--bs-primary) !important
 }
 
 .dark-layout .dropdown-menu {
@@ -437,13 +437,13 @@ body.dark-layout {
 .dark-layout .dropdown-menu .dropdown-item:focus,
 .dark-layout .dropdown-menu .dropdown-item:hover {
     background: rgba(115, 103, 240, .12);
-    color: #7367F0
+    color: var(--bs-primary)
 }
 
 .dark-layout .dropdown-menu .dropdown-item.active,
 .dark-layout .dropdown-menu .dropdown-item:active {
     color: #FFF;
-    background-color: #7367F0
+    background-color: var(--bs-primary)
 }
 
 .dark-layout .dropdown-menu .dropdown-item.disabled,
@@ -489,7 +489,7 @@ body.dark-layout {
 }
 
 .dark-layout .pagination:not([class*=pagination-]) .page-item.active .page-link {
-    background-color: #7367F0
+    background-color: var(--bs-primary)
 }
 
 .dark-layout .pagination:not([class*=pagination-]) .page-item.active .page-link:hover {
@@ -502,7 +502,7 @@ body.dark-layout {
 }
 
 .dark-layout .pagination:not([class*=pagination-]) .page-item .page-link:hover {
-    color: #7367F0
+    color: var(--bs-primary)
 }
 
 .dark-layout .pagination:not([class*=pagination-]) .page-item.next-item .page-link:hover,
@@ -556,7 +556,7 @@ body.dark-layout {
 .dark-layout .nav-tabs .nav-item .nav-link.active,
 .dark-layout .nav-tabs.nav-justified .nav-item .nav-link.active {
     background-color: #283046;
-    color: #7367F0
+    color: var(--bs-primary)
 }
 
 .dark-layout .nav-pills .nav-item .nav-link.disabled,
@@ -571,7 +571,7 @@ body.dark-layout {
 
 .dark-layout .nav-pills .nav-item .nav-link.active {
     color: #FFF;
-    background-color: #7367F0
+    background-color: var(--bs-primary)
 }
 
 .dark-layout .popover.bs-popover-top .popover-arrow:before {
@@ -923,7 +923,7 @@ body.dark-layout {
 
 .dark-layout .input-group:focus-within .form-control,
 .dark-layout .input-group:focus-within .input-group-text {
-    border-color: #7367F0;
+    border-color: var(--bs-primary);
     box-shadow: none
 }
 
@@ -1051,7 +1051,7 @@ body.dark-layout {
 .dark-layout .dataTables_wrapper .dt-buttons .buttons-pdf:active,
 .dark-layout .dataTables_wrapper .dt-buttons .buttons-print:active,
 .dark-layout .dataTables_wrapper .dt-buttons .dt-button-collection [class*=buttons-]:active {
-    background-color: #7367F0 !important;
+    background-color: var(--bs-primary) !important;
     color: #FFF
 }
 
@@ -1622,7 +1622,7 @@ body.dark-layout {
 }
 
 .dark-layout .app-user-view .plan-card {
-    border-color: #7367F0 !important
+    border-color: var(--bs-primary) !important
 }
 
 .dark-layout .customizer {
@@ -1708,7 +1708,7 @@ body.dark-layout {
 }
 
 .dark-layout .horizontal-layout .main-menu-content .navbar-nav>li.active .dropdown-menu li.active>a:hover {
-    color: #7367F0 !important
+    color: var(--bs-primary) !important
 }
 
 .dark-layout .horizontal-layout .main-menu-content .navbar-nav>li.active .dropdown-menu li.open.active>a {

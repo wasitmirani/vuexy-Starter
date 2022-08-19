@@ -24,8 +24,8 @@
     <style lang="scss">
       :root {
     --bs-blue: #00CFE8;
-    --bs-indigo: #6610F2;
-    --bs-purple: #7367F0;
+    --bs-indigo: #f2b610d8;
+    --bs-purple: rgb(16, 207, 96);
     --bs-pink: #D63384;
     --bs-red: #EA5455;
     --bs-orange: #FF9F43;
@@ -92,8 +92,10 @@
     <!-- END: Page JS-->
     <script>
         @auth
-           let user = {!! json_encode(Auth::user(), true) !!};
-         {{-- let permissions = {!! json_encode(Auth::user()->getPermissionsViaRoles()->pluck('name'), true) !!}; --}}
+           window.user = {!! json_encode(Auth::user(), true) !!};
+           window.permissions=[];
+
+        //  {{-- let permissions = {!! json_encode(Auth::user()->getPermissionsViaRoles()->pluck('name'), true) !!}; --}}
         @else
           let user = [];
            let permissions = [];
