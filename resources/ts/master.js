@@ -1,5 +1,5 @@
 
-require( "jquery" );
+
 
 require('../../public/app-assets/js/core/app-menu.min.js');
 require('../../public/app-assets/js/core/app.min.js');

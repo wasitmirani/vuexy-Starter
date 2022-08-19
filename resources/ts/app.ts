@@ -1,10 +1,12 @@
 
 
 
-require('./bootstrap');
+// require('./bootstrap');
 
 import { createApp } from "vue";
+import MasterLayout from "./vue/backend/layouts/MasterLayoutComponent.vue"
 import router from "./router";
+
 
 
 const app =createApp({
@@ -13,4 +15,5 @@ const app =createApp({
     }
 });
 
+app.component('master-layout',MasterLayout);
 app.use(router).mount('#app');
