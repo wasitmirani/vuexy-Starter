@@ -30,7 +30,35 @@ const routes = [
 ];
 
 
-export default createRouter({
+const router= createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+            return {
+                selector: to.hash,
+                behavior: 'smooth',
+            }
+        }
+    },
 })
+
+let permissions=JSON.parse(`${localStorage.getItem('permissions')}`);
+
+router.beforeEach((to, from, next) => {
+
+    // if (to.meta.permissions) {
+    //     if (permissions.indexOf(to.meta.permissions) !== -1) {
+
+    //             next()
+    //     }
+    //     else {
+    //         next({ path: '/unauthorized/user' })
+    //         console.log(" not auth");
+    //     }
+    // }
+    next()
+
+});
+
+export default router;

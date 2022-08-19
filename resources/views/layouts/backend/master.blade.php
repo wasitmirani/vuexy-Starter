@@ -90,6 +90,19 @@
     <!-- END: Footer-->
 
     <!-- END: Page JS-->
+    <script>
+        @auth
+           let user = {!! json_encode(Auth::user(), true) !!};
+         {{-- let permissions = {!! json_encode(Auth::user()->getPermissionsViaRoles()->pluck('name'), true) !!}; --}}
+        @else
+          let user = [];
+           let permissions = [];
+       @endauth
+    //    localStorage.removeItem('setup');
+       localStorage.removeItem('permissions');
+       localStorage.setItem('permissions', JSON.stringify(permissions))
+
+    </script>
        <!-- Scripts -->
        <script src="{{ mix('js/app.js') }}" ></script>
     <script src="{{asset('app-assets/vendors/js/vendors.min.js')}}"></script>
@@ -100,8 +113,6 @@
       <script src="{{asset('app-assets/vendors/js/charts/apexcharts.min.js')}}"></script>
       <script src="{{asset('app-assets/vendors/js/extensions/toastr.min.js')}}"></script>
 
-
-
     <script>
       $(window).on('load',  function(){
         console.log(feather);
@@ -109,6 +120,25 @@
           feather.replace({ width: 14, height: 14 });
         }
       })
+      @if(session('login')=="true" || session('login')==true)
+      setTimeout(function() {
+      // toastr['success'](
+      // 'You have successfully logged in to {{config('app.name')}}.',
+      // '👋 Welcome {{Auth::user()->name}}', {
+      //     closeButton: true,
+      //      tapToDismiss: false
+      // });
+      }, 1000);
+      @php
+      session(['login' => '']);
+      @endphp
+      @endif
+       toastr['success'](
+      'You have successfully logged in to {{config('app.name')}}.',
+      '👋 Welcome {{Auth::user()->name}}', {
+          closeButton: true,
+           tapToDismiss: false
+      });
     </script>
   </body>
   <!-- END: Body-->
