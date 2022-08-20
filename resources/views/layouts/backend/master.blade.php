@@ -20,6 +20,7 @@
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/css/vendors.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{mix('css/master.css')}}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
     <!-- END: Custom CSS-->
     <style lang="scss">
       :root {

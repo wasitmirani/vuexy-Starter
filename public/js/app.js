@@ -19556,6 +19556,15 @@ var routes = [// { path: "/:catchAll(.*)",
   meta: {
     permissions: "dashboard-view"
   }
+}, {
+  path: "".concat(per_fix, "/settings"),
+  component: function component() {
+    return getComponent("settings/Settings");
+  },
+  name: "settings",
+  meta: {
+    permissions: "settings-view"
+  }
 }];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHistory)(),
@@ -41822,6 +41831,10 @@ var map = {
 	"./dashboard/MasterDashboardComponent.vue": [
 		"./resources/ts/vue/backend/pages/dashboard/MasterDashboardComponent.vue",
 		"resources_ts_vue_backend_pages_dashboard_MasterDashboardComponent_vue"
+	],
+	"./settings/SettingsComponent.vue": [
+		"./resources/ts/vue/backend/pages/settings/SettingsComponent.vue",
+		"resources_ts_vue_backend_pages_settings_SettingsComponent_vue"
 	]
 };
 function webpackAsyncContext(req) {
@@ -41930,7 +41943,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if (chunkId === "resources_ts_vue_backend_pages_dashboard_MasterDashboardComponent_vue") return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_ts_vue_backend_pages_dashboard_MasterDashboardComponent_vue":1,"resources_ts_vue_backend_pages_settings_SettingsComponent_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

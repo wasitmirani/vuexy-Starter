@@ -1,7 +1,9 @@
 <template lang="">
     <div>
-                <!-- Dashboard Ecommerce Starts -->
+    <!-- This example requires Tailwind CSS v2.0+ -->
+
 <section id="dashboard-ecommerce">
+
   <div class="row match-height">
     <!-- Medal Card -->
     <div class="col-xl-4 col-md-6 col-12">

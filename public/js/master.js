@@ -883,13 +883,7 @@ $(window).on("load", function () {
       A = document.querySelector("#browser-state-chart-danger"),
       B = document.querySelector("#goal-overview-radial-bar-chart"),
       S = "rtl" === $("html").attr("data-textdirection");
-  setTimeout(function () {
-    toastr.success("You have successfully logged in to Vuexy. Now you can start to explore!", "👋 Welcome John Doe!", {
-      closeButton: !0,
-      tapToDismiss: !1,
-      rtl: S
-    });
-  }, 2e3), o = {
+  setTimeout(function () {}, 2e3), o = {
     chart: {
       height: 70,
       type: "bar",
@@ -1410,7 +1404,7 @@ $(window).on("load", function () {
         blur: 3,
         left: 1,
         top: 1,
-        opacity: .1
+        opacity: 0.1
       }
     },
     colors: ["#51e5a8"],
@@ -1443,7 +1437,7 @@ $(window).on("load", function () {
       gradient: {
         shade: "dark",
         type: "horizontal",
-        shadeIntensity: .5,
+        shadeIntensity: 0.5,
         gradientToColors: [window.colors.solid.success],
         inverseColors: !0,
         opacityFrom: 1,

@@ -1,3 +1,9 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
 .apexcharts-canvas {
   position: relative;
   -webkit-user-select: none;

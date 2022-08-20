@@ -1,5 +1,10 @@
 /* @import 'public/app-assets/vendors/css/vendors.min.css'; */
 /* @import "../../public/app-assets/vendors/css/vendors.min.css"; */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
 @import '/public/app-assets/vendors/css/charts/apexcharts.css';
 @import '/public/app-assets/vendors/css/extensions/toastr.min.css';
 @import '/public/app-assets/css/bootstrap.min.css';
