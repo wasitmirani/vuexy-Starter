@@ -515,11 +515,11 @@
     <p class="fw-bold">Layout Width</p>
     <div class="d-flex">
       <div class="form-check me-1">
-        <input type="radio" id="layout-width-full" name="layoutWidth" class="form-check-input" checked="">
+        <input type="radio" id="layout-width-full" @change="setLayoutWidth('full')" name="layoutWidth" class="form-check-input" checked="">
         <label class="form-check-label" for="layout-width-full">Full Width</label>
       </div>
       <div class="form-check me-1">
-        <input type="radio" id="layout-width-boxed" name="layoutWidth" class="form-check-input">
+        <input type="radio" v-model="layoutwidth"  @change="setLayoutWidth('box')" id="layout-width-boxed" name="layoutWidth" class="form-check-input" >
         <label class="form-check-label" for="layout-width-boxed">Boxed</label>
       </div>
     </div>
@@ -605,7 +605,22 @@
     import SidebarMenu from "./components/SidebarMenu.vue";
    export default {
         components:{HeaderMenu,SidebarMenu},
+        data(){
+            layoutwidth:"box";
+        },
+        methods:{
+            setLayoutWidth(type){
+
+                let data={mode:type};
+                this.layoutwidth=type;
+                localStorage.setItem('layoutwidth',JSON.stringify({layoutwidth:data}))
+            }
+        },
        mounted() {
+        let layout=JSON.parse(localStorage.getItem('layoutwidth'));
+        this.layoutwidth=layout?.layoutwidth?.mode;
+
+        console.log(this.layoutwidth);
         //    axios.get('/api/test').then((res)=>{
         //        console.log(res);
         //    });
