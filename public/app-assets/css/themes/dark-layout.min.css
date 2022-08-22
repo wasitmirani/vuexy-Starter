@@ -436,7 +436,7 @@ body.dark-layout {
 
 .dark-layout .dropdown-menu .dropdown-item:focus,
 .dark-layout .dropdown-menu .dropdown-item:hover {
-    background: rgba(115, 103, 240, .12);
+    background: rgba(var(--bs-primary-rgb), .12);
     color: var(--bs-primary)
 }
 
@@ -1169,7 +1169,7 @@ body.dark-layout {
 }
 
 .dark-layout .email-application .content-area-wrapper .email-app-list .email-user-list .user-mail.selected-row-bg {
-    background-color: rgba(115, 103, 240, .06);
+    background-color: rgba(var(--bs-primary-rgb), .06);
     border-color: #3B4253
 }
 

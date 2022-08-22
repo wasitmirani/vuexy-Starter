@@ -353,12 +353,12 @@ input:focus~.bg-light {
 }
 
 .alert-primary {
-    background: rgba(115, 103, 240, .12) !important;
+    background: rgba(var(--bs-primary-rgb), .12) !important;
     color: var(--bs-primary) !important
 }
 
 .alert-primary .alert-heading {
-    box-shadow: rgba(115, 103, 240, .4) 0 6px 15px -7px
+    box-shadow: rgba(var(--bs-primary-rgb), .4) 0 6px 15px -7px
 }
 
 .alert-primary .alert-link {
@@ -371,13 +371,13 @@ input:focus~.bg-light {
 }
 
 .bg-light-primary {
-    background: rgba(115, 103, 240, .12) !important;
+    background: rgba(var(--bs-primary-rgb), .12) !important;
     color: var(--bs-primary) !important
 }
 
 .bg-light-primary.fc-h-event,
 .bg-light-primary.fc-v-event {
-    border-color: rgba(115, 103, 240, .1)
+    border-color: rgba(var(--bs-primary-rgb), .1)
 }
 
 .bg-light-primary .fc-list-event-dot,
@@ -386,7 +386,7 @@ input:focus~.bg-light {
 }
 
 .bg-light-primary.fc-list-event:hover td {
-    background: rgba(115, 103, 240, .1) !important
+    background: rgba(var(--bs-primary-rgb), .1) !important
 }
 
 .bg-light-primary.fc-list-event .fc-list-event-title {
@@ -423,13 +423,13 @@ input:focus~.bg-light {
 }
 
 .badge.badge-light-primary {
-    background-color: rgba(115, 103, 240, .12);
+    background-color: rgba(var(--bs-primary-rgb), .12);
     color: var(--bs-primary) !important
 }
 
 .overlay-primary {
     background: var(--bs-primary);
-    background: rgba(115, 103, 240, .6)
+    background: rgba(var(--bs-primary-rgb), .6)
 }
 
 .btn-flat-primary.dropdown-toggle::after,
@@ -469,13 +469,13 @@ input:focus~.bg-light {
 }
 
 .btn-flat-primary:hover:not(.disabled):not(:disabled) {
-    background-color: rgba(115, 103, 240, .12)
+    background-color: rgba(var(--bs-primary-rgb), .12)
 }
 
 .btn-flat-primary.active,
 .btn-flat-primary:active,
 .btn-flat-primary:focus {
-    background-color: rgba(115, 103, 240, .2);
+    background-color: rgba(var(--bs-primary-rgb), .2);
     color: var(--bs-primary)
 }
 
@@ -517,7 +517,7 @@ input:focus~.bg-light {
 }
 
 .btn-outline-primary:hover:not(.disabled):not(:disabled) {
-    background-color: rgba(115, 103, 240, .04);
+    background-color: rgba(var(--bs-primary-rgb), .04);
     color: var(--bs-primary)
 }
 
@@ -525,7 +525,7 @@ input:focus~.bg-light {
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .btn-outline-primary:not(:disabled):not(.disabled):active,
 .btn-outline-primary:not(:disabled):not(.disabled):focus {
-    background-color: rgba(115, 103, 240, .2);
+    background-color: rgba(var(--bs-primary-rgb), .2);
     color: var(--bs-primary)
 }
 
@@ -536,13 +536,13 @@ input:focus~.bg-light {
 .btn-check:active+.btn-outline-primary,
 .btn-check:checked+.btn-outline-primary {
     color: var(--bs-primary);
-    background-color: rgba(115, 103, 240, .2) !important
+    background-color: rgba(var(--bs-primary-rgb), .2) !important
 }
 
 .btn-flat-primary.waves-effect .waves-ripple,
 .btn-outline-primary.waves-effect .waves-ripple {
-    background: -webkit-radial-gradient(rgba(115, 103, 240, .2) 0, rgba(115, 103, 240, .3) 40%, rgba(115, 103, 240, .4) 50%, rgba(115, 103, 240, .5) 60%, rgba(255, 255, 255, 0) 70%);
-    background: radial-gradient(rgba(115, 103, 240, .2) 0, rgba(115, 103, 240, .3) 40%, rgba(115, 103, 240, .4) 50%, rgba(115, 103, 240, .5) 60%, rgba(255, 255, 255, 0) 70%)
+    background: -webkit-radial-gradient(rgba(var(--bs-primary-rgb), .2) 0, rgba(var(--bs-primary-rgb), .3) 40%, rgba(var(--bs-primary-rgb), .4) 50%, rgba(var(--bs-primary-rgb), .5) 60%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(rgba(var(--bs-primary-rgb), .2) 0, rgba(var(--bs-primary-rgb), .3) 40%, rgba(var(--bs-primary-rgb), .4) 50%, rgba(var(--bs-primary-rgb), .5) 60%, rgba(255, 255, 255, 0) 70%)
 }
 
 .bullet.bullet-primary {
@@ -595,7 +595,7 @@ input:focus~.bg-light {
     color: #FFF;
     background-color: var(--bs-primary) !important;
     border-color: var(--bs-primary);
-    box-shadow: 0 4px 18px -4px rgba(115, 103, 240, .65)
+    box-shadow: 0 4px 18px -4px rgba(var(--bs-primary-rgb), .65)
 }
 
 .divider.divider-primary .divider-text:after,
@@ -605,7 +605,7 @@ input:focus~.bg-light {
 }
 
 .progress-bar-primary {
-    background-color: rgba(115, 103, 240, .12)
+    background-color: rgba(var(--bs-primary-rgb), .12)
 }
 
 .progress-bar-primary .progress-bar {
@@ -622,7 +622,7 @@ input:focus~.bg-light {
 }
 
 .timeline .timeline-point-primary.timeline-point-indicator:before {
-    background: rgba(115, 103, 240, .12) !important
+    background: rgba(var(--bs-primary-rgb), .12) !important
 }
 
 input:focus~.bg-primary {
@@ -637,7 +637,7 @@ input:focus~.bg-primary {
 .form-check-primary .form-check-input:not(:disabled):checked,
 .form-check-primary .form-check-input:not(:disabled):focus {
     border-color: var(--bs-primary);
-    box-shadow: 0 2px 4px 0 rgba(115, 103, 240, .4)
+    box-shadow: 0 2px 4px 0 rgba(var(--bs-primary-rgb), .4)
 }
 
 .select2-primary .select2-container--default .select2-selection--multiple .select2-selection__choice {

@@ -46,7 +46,7 @@
     --bs-gray-700: #4E5154;
     --bs-gray-800: #1E1E1E;
     --bs-gray-900: #2A2E30;
-    --bs-primary: #07cc60cc;
+    --bs-primary: #6e0aa3;
     --bs-secondary: #82868B;
     --bs-success: #28C76F;
     --bs-info: #00CFE8;
@@ -54,7 +54,7 @@
     --bs-danger: #EA5455;
     --bs-light: #F6F6F6;
     --bs-dark: #4B4B4B;
-    --bs-primary-rgb: 115, 103, 240;
+    --bs-primary-rgb: 97, 6, 145;
     --bs-secondary-rgb: 130, 134, 139;
     --bs-success-rgb: 40, 199, 111;
     --bs-info-rgb: 0, 207, 232;
@@ -107,10 +107,10 @@
 
     </script>
        <!-- Scripts -->
-       <script src="{{ mix('js/app.js') }}" ></script>
+
     <script src="{{asset('app-assets/vendors/js/vendors.min.js')}}"></script>
       <!-- BEGIN: Page Vendor JS-->
-
+      <script src="{{ mix('js/app.js') }}" ></script>
     <script src="{{ mix('/js/master.js') }}"></script>
 
       <script src="{{asset('app-assets/vendors/js/charts/apexcharts.min.js')}}"></script>

@@ -97,7 +97,7 @@ sup {
     --bs-danger: #EA5455;
     --bs-light: #F6F6F6;
     --bs-dark: #4B4B4B;
-    --bs-primary-rgb: 115, 103, 240;
+    --bs-primary-rgb: var(--bs-primary-rgb);
     --bs-secondary-rgb: 130, 134, 139;
     --bs-success-rgb: 40, 199, 111;
     --bs-info-rgb: 0, 207, 232;
@@ -3238,7 +3238,7 @@ textarea.form-control-lg {
 .form-check-input:focus {
     border-color: var(--bs-primary);
     outline: 0;
-    box-shadow: 0 2px 4px 0 rgba(115, 103, 240, .4)
+    box-shadow: 0 2px 4px 0 rgba(var(--bs-primary-rgb), .4)
 }
 
 .form-check-input:checked {
@@ -3898,7 +3898,7 @@ textarea.form-control.is-invalid {
 .btn-check:focus+.btn,
 .btn:focus {
     outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(115, 103, 240, .25)
+    box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .25)
 }
 
 .btn-check:active+.btn-primary:focus,
@@ -3927,8 +3927,8 @@ fieldset:disabled .btn {
 .btn-check:focus+.btn-primary,
 .btn-primary:focus,
 .btn-primary:hover {
-    background-color: #6258CC;
-    border-color: #5C52C0;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
     color: #FFF
 }
 
@@ -3938,7 +3938,7 @@ fieldset:disabled .btn {
 .btn-primary:active,
 .show>.btn-primary.dropdown-toggle {
     color: #FFF;
-    background-color: #5C52C0;
+    background-color: var(--bs-primary);
     border-color: #564DB4
 }
 
@@ -4244,7 +4244,7 @@ fieldset:disabled .btn {
 .btn-outline-primary.dropdown-toggle.show:focus,
 .btn-outline-primary:active:focus,
 .btn-outline-primary:focus {
-    box-shadow: 0 0 0 .25rem rgba(115, 103, 240, .5)
+    box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .5)
 }
 
 .btn-dark.disabled,
@@ -4840,7 +4840,7 @@ fieldset:disabled .btn {
 .dropdown-item:focus,
 .dropdown-item:hover {
     color: var(--bs-primary);
-    background-color: rgba(115, 103, 240, .12)
+    background-color: rgba(var(--bs-primary-rgb), .12)
 }
 
 .dropdown-item.active,
@@ -6316,7 +6316,7 @@ fieldset:disabled .btn {
     z-index: 3;
     color: inherit;
     outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(115, 103, 240, .25)
+    box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .25)
 }
 
 .page-item:not(:first-child) .page-link {
@@ -6539,7 +6539,7 @@ fieldset:disabled .btn {
     display: -webkit-box;
     display: flex;
     height: .857rem;
-    background-color: rgba(115, 103, 240, .12);
+    background-color: rgba(var(--bs-primary-rgb), .12);
     border-radius: 5rem
 }
 

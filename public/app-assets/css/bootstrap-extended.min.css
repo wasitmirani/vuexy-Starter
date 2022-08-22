@@ -428,7 +428,7 @@ textarea.form-control-lg {
 }
 
 .form-check-input:not(:disabled):checked {
-    box-shadow: 0 2px 4px 0 rgba(115, 103, 240, .4)
+    box-shadow: 0 2px 4px 0 rgba(--bs-primary-rgb, .4)
 }
 
 .form-switch .form-check-input:checked,
@@ -1636,8 +1636,8 @@ textarea:-webkit-autofill {
 }
 
 .card-congratulations {
-    background: -webkit-linear-gradient(332deg, var(--bs-primary), rgba(115, 103, 240, .7));
-    background: linear-gradient(118deg, var(--bs-primary), rgba(115, 103, 240, .7));
+    background: -webkit-linear-gradient(332deg, var(--bs-primary), rgba(--bs-primary-rgb, .7));
+    background: linear-gradient(118deg, var(--bs-primary), rgba(--bs-primary-rgb, .7));
     color: #FFF
 }
 
@@ -1687,7 +1687,7 @@ textarea:-webkit-autofill {
 }
 
 .card-developer-meetup .meetup-img-wrapper {
-    background-color: rgba(115, 103, 240, .1)
+    background-color: rgba(--bs-primary-rgb, .1)
 }
 
 .card-developer-meetup .meetup-header {
@@ -2222,7 +2222,7 @@ textarea:-webkit-autofill {
 
 .nav-pills .nav-link.active {
     border-color: var(--bs-primary);
-    box-shadow: 0 4px 18px -4px rgba(115, 103, 240, .65)
+    box-shadow: 0 4px 18px -4px rgba(--bs-primary-rgb, .65)
 }
 
 .nav-pills .nav-link.disabled {
@@ -2318,8 +2318,8 @@ textarea:-webkit-autofill {
     left: 0;
     width: 100%;
     height: 3px;
-    background: -webkit-linear-gradient(60deg, var(--bs-primary), rgba(115, 103, 240, .5)) !important;
-    background: linear-gradient(30deg, var(--bs-primary), rgba(115, 103, 240, .5)) !important;
+    background: -webkit-linear-gradient(60deg, var(--bs-primary), rgba(var(--bs-primary-rgb), .5)) !important;
+    background: linear-gradient(30deg, var(--bs-primary), rgba(var(--bs-primary-rgb), .5)) !important;
     -webkit-transition: -webkit-transform .3s;
     transition: -webkit-transform .3s;
     transition: transform .3s;

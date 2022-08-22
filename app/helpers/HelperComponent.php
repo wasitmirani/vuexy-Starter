@@ -89,7 +89,7 @@ class HelperComponent
 
 
             setSingleLink("Settings", "settings", "settings-view", "/settings"),
-            setSingleLink("App Settings", "tool", "app-settings-view", "/app-settings"),
+
 
 
 
