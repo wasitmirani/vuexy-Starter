@@ -87,7 +87,7 @@ export default {
            },
            getSideBarMenu(){
                 this.loading = true;
-                    axios.get('/api/config/sidebar-menu').then(response=>{
+                    axios.get('/config/sidebar-menu').then(response=>{
                         this.sidebar_menu = response.data;
                         this.loading = false;
                     });

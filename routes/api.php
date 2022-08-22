@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\api\layout\LayoutController;
+use App\Http\Controllers\backend\api\settings\SettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::prefix('config')->group(function () {
     Route::get('/sidebar-menu',[LayoutController::class,'getSideBarMenu']);
+    Route::post('update-app-settings',[SettingsController::class,'updateSettings']);
 
 });
