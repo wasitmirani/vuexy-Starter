@@ -6,7 +6,7 @@
                 <li class="nav-item me-auto"><router-link class="navbar-brand" to="/portal/dashboard">
                     <span class="brand-logo">
                     </span>
-                        <h2 style="font-size: 14px;" class="brand-text">Wastage Marketplace</h2>
+                        <h2 style="font-size: 14px;" class="brand-text">Vuexy</h2>
                     </router-link></li>
                 <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i
                             class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i
