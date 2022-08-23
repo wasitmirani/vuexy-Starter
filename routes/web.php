@@ -17,7 +17,9 @@ use App\Http\Controllers\backend\BackendController;
 
 
 
-
+Route::get('/',function(){
+return redirect('login');
+});
 Route::get('/portal/{any?}',[BackendController::class,'index'])->middleware('auth')->name('dashboard')->where('any', '[\/\w\.-]*');
 
 Route::get('unauthorized/user',function(){

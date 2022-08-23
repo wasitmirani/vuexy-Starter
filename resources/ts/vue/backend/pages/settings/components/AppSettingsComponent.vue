@@ -14,7 +14,7 @@
                 <span class="fw-bolder">Basic Colors</span>
                 <span class="fw-bolder">Default</span>
               </span>
-              <small class="d-block">Get 1 project with 1 team member.</small>
+              <!-- <small class="d-block">Get 1 project with 1 team member.</small> -->
             </label>
           </div>
 
@@ -25,7 +25,7 @@
                 <span class="fw-bolder">Custom Colors</span>
                 <span class="fw-bolder">By User</span>
               </span>
-              <small class="d-block">Get 5 projects with 5 team members.</small>
+              <!-- <small class="d-block">Get 5 projects with 5 team members.</small> -->
             </label>
           </div>
         </div>
@@ -34,18 +34,18 @@
         <div class="row" v-show="custom_layout">
              <div class="col pt-2">
              <label class="form-label" for="defaultInput">Primary Color</label>
-                <input type="color" class="form-control" id="floating-label1" placeholder="Label-placeholder" />
+                <input type="color" v-model="settings.primary_color" class="form-control" id="floating-label1" placeholder="Label-placeholder" />
                 </div>
              <div class="col pt-2">
                 <label class="form-label" for="defaultInput">Primary Rgb Color</label><br>
-               <color-picker   class="form-control" v-model:pureColor="pureColor" v-model:gradientColor="gradientColor"/>
+               <color-picker   class="form-control" format="rgb"    v-model:pureColor="settings.primary_rgb"/>
               </div>
-           <div class="pt-2">
-            <button type="button" class="btn btn-primary waves-effect waves-float waves-light">Submit</button>
-        </div>
-        </div>
 
 
+             <div class="pt-2">
+            <button @click="onSubmit" type="button" class="btn btn-primary waves-effect waves-float waves-light">Submit</button>
+        </div>
+        </div>
         </div>
       </div>
     </div>
@@ -59,15 +59,29 @@
  import { ColorInputWithoutInstance } from "tinycolor2";
 export default {
      setup() {
-       const pureColor = ref<ColorInputWithoutInstance>("red");
-       const gradientColor = ref("linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%)");
+       let pureColor = ref<ColorInputWithoutInstance>("red");
+       const gradientColor = ref("linear-gradient(0deg, rgba(0, 0, 0,   1) 0%, rgba(0, 0, 0, 1) 100%)");
+
+    //    pureColor=pureColor?.replace(/rgb/, "");
 
        return { pureColor, gradientColor }
      },
      data(){
         return{
              custom_layout:false,
+             settings:{},
         }
+     },
+     methods:{
+        onSubmit(){
+            let primary_rgb=this.settings.primary_rgb.replace('rgb', "");
+            primary_rgb=primary_rgb.replace('(', "");
+            primary_rgb=primary_rgb.replace(')', "");
+           this.settings.primary_rgb= primary_rgb;
+            axios.post('/config/update-app-settings', {settings:this.settings,type:'custom'}).then((res)=>{
+
+            });
+        },
      },
 
 
