@@ -2,8 +2,9 @@
 <?php
 
 
-use Illuminate\Support\Str;
+use App\Models\Setting;
 
+use Illuminate\Support\Str;
 use App\helpers\HelperComponent;
 
 
@@ -36,6 +37,17 @@ function singleImgUpload($request, $path)
     return $name;
 }
 
+function getLayoutColors(){
+   $setting= Setting::where('user_id',auth()->user()->id)->first();
+   if(!empty($setting)){
+
+    return $setting;
+   }
+   else {
+    $setting= Setting::where('type','default')->first();
+    return $setting;
+   }
+}
 
 function setSubMenu($title,$icon,$v_can=null,$v_route=null,$prefix="/portal"){
     return [

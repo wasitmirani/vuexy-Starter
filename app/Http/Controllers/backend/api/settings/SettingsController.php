@@ -11,10 +11,10 @@ class SettingsController extends Controller
     //
     public function updateSettings(Request $request){
 
-        $setting=Setting::where('user_id',auth()->user()->id)->first();
+        $setting=Setting::where('user_id',1)->first();
         if(empty($setting)){
             $setting=Setting::create([
-                'user_id'=>auth()->user()->id,
+                'user_id'=>1,
                 'active'=>1,
                 'type'=>$request->type,
                 'settings'=>$request->settings,
@@ -22,7 +22,7 @@ class SettingsController extends Controller
         }
         else {
             $setting=  $setting->update([
-                'user_id'=>auth()->user()->id,
+                'user_id'=>1,
                 'active'=>1,
                 'type'=>$request->type,
                 'settings'=>$request->settings,
