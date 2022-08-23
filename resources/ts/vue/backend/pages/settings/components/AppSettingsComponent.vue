@@ -40,7 +40,7 @@
                 <label class="form-label" for="defaultInput">Primary Rgb Color</label><br>
                <color-picker   class="form-control" v-model:pureColor="pureColor" v-model:gradientColor="gradientColor"/>
               </div>
-                      <div class="pt-2">
+           <div class="pt-2">
             <button type="button" class="btn btn-primary waves-effect waves-float waves-light">Submit</button>
         </div>
         </div>
