@@ -362,7 +362,7 @@ input:focus~.bg-light {
 }
 
 .alert-primary .alert-link {
-    color: #5E50EE !important
+    color: var(--bs-primary)!important
 }
 
 .alert-primary .btn-close {
@@ -448,7 +448,7 @@ input:focus~.bg-light {
 .btn-primary:active,
 .btn-primary:focus {
     color: #FFF;
-    background-color: #5E50EE !important
+    background-color: var(--bs-primary)!important
 }
 
 .btn-primary:hover:not(.disabled):not(:disabled) {
