@@ -946,6 +946,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@kyvg/vue3-notification@^2.3.6":
+  "integrity" "sha512-uQcVOrJIyEYoXLctgJqlj2YPhCaZ80mXgF1xgQZwshqeneNgG08WE8Iw9U3IH8OgUITkRGII0YopdXwLeOXb3w=="
+  "resolved" "https://registry.npmjs.org/@kyvg/vue3-notification/-/vue3-notification-2.3.6.tgz"
+  "version" "2.3.6"
+
 "@leichtgewicht/ip-codec@^2.0.1":
   "integrity" "sha512-nkalE/f1RvRGChwBnEIoBfSEYOXnCRdleKuv6+lePbMDrMZXeDQnqak5XDOeBgrPPyPfAdcCu/B5z+v3VhplGg=="
   "resolved" "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.3.tgz"
@@ -5689,7 +5694,7 @@
   dependencies:
     "is-plain-object" "5.0.0"
 
-"vue@^2.0.0 || ^3.0.0", "vue@^2.6.0 || ^3.2.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.2.0", "vue@^3.2.31", "vue@^3.2.6", "vue@3.2.31":
+"vue@^2.0.0 || ^3.0.0", "vue@^2.6.0 || ^3.2.0", "vue@^3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.2.0", "vue@^3.2.31", "vue@^3.2.6", "vue@3.2.31":
   "integrity" "sha512-odT3W2tcffTiQCy57nOT93INw1auq5lYLLYtWpPYQQYQOOdHiqFct9Xhna6GJ+pJQaF67yZABraH47oywkJgFw=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-3.2.31.tgz"
   "version" "3.2.31"
