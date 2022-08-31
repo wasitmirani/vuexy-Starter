@@ -22,5 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::prefix('config')->group(function () {
     Route::get('/sidebar-menu',[LayoutController::class,'getSideBarMenu']);
     Route::post('update-app-settings',[SettingsController::class,'updateSettings']);
-
+    Route::get('settings',[SettingsController::class,'getSettings']);
 });

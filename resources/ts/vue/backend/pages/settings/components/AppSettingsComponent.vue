@@ -34,11 +34,11 @@
         <div class="row" v-show="custom_layout">
              <div class="col pt-2">
              <label class="form-label" for="defaultInput">Primary Color</label>
-                <input type="color" v-model="settings.primary_color" class="form-control" id="floating-label1" placeholder="Label-placeholder" />
+                <input type="color" v-model="settings.custom.primary_color" class="form-control" id="floating-label1" placeholder="Label-placeholder" />
                 </div>
              <div class="col pt-2">
                 <label class="form-label" for="defaultInput">Primary Rgb Color</label><br>
-               <color-picker   class="form-control" format="rgb"    v-model:pureColor="settings.primary_rgb"/>
+               <color-picker   class="form-control" format="rgb"    v-model:pureColor="settings.custom.primary_rgb"/>
               </div>
 
 
@@ -69,21 +69,41 @@ export default {
      data(){
         return{
              custom_layout:false,
-             settings:{},
+             settings:{
+              custom:{
+                primary_color:"",
+                primary_rgb:"",
+              },
+            },
         }
      },
      methods:{
         onSubmit(){
-            let primary_rgb=this.settings.primary_rgb.replace('rgb', "");
+            let primary_rgb=this.settings.custom.primary_rgb.replace('rgb', "");
             primary_rgb=primary_rgb.replace('(', "");
             primary_rgb=primary_rgb.replace(')', "");
-           this.settings.primary_rgb= primary_rgb;
-            axios.post('/config/update-app-settings', {settings:this.settings,type:'custom'}).then((res)=>{
+           this.settings.custom.primary_rgb= primary_rgb;
+            axios.post('/config/update-app-settings', {settings:this.settings.custom,type:'custom'}).then((res)=>{
 
             });
         },
+        mapColor(item){
+          this.settings.custom.primary_rgb="rgb("+item.settings.primary_rgb+")";
+          this.settings.custom.primary_color=item.settings.primary_color;
+        },
+        getSettings(){
+          axios.get('/config/settings').then((res)=>{
+            let data=res.data;
+            console.log(data);
+            if(data.setting_by_user){
+                this.mapColor(data.setting_by_user);
+            }
+          });
+        },
      },
-
+     mounted() {
+      this.getSettings();
+     },
 
 }
 </script>
