@@ -84,7 +84,8 @@ export default {
             primary_rgb=primary_rgb.replace(')', "");
            this.settings.custom.primary_rgb= primary_rgb;
             axios.post('/config/update-app-settings', {settings:this.settings.custom,type:'custom'}).then((res)=>{
-
+              this.$root.alertNotify(res.status, 'Update Successfuly', 'info', res.data);
+              window.location.reload(true);
             });
         },
         mapColor(item){
